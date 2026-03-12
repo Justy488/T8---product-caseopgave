@@ -1,27 +1,80 @@
 "use strict";
 
 const params = new URLSearchParams(window.location.search);
-const group = params.get("group");
+const type = params.get("type");
 
-const categoryGroups = {
-  Clothes: ["tops", "womens-dresses"],
-  Accessories: ["womens-jewellery", "womens-shoes", "womens-watches", "womens-bags", "sunglasses"],
-  Beauty: ["skin-care", "fragrances", "beauty"],
-};
+console.log("type", type);
 
-const list = categoryGroups[group];
-const container = document.querySelector("main");
+const container = document.querySelector("#subcategoryContainer");
 
-container.innerHTML = `
-  <h2>${group}</h2>
-  <section class="subcategoryList">
-    ${list
-      .map(
-        (cat) => `
-      <a class="subcategory" href="kategorier.html?category=${cat}">
-        ${cat.replace("-", " ")}
-      </a>`,
-      )
-      .join("")}
-  </section>
-`;
+if (type === "clothes") {
+  container.innerHTML = `
+  
+  <a href="productlist.html?category=tops">
+    <article class="categoryCard">
+      <h3>Tops</h3>
+    </article>
+  </a>
+
+  <a href="productlist.html?category=womens-dresses">
+    <article class="categoryCard">
+      <h3>Kjoler</h3>
+    </article>
+  </a>
+
+  `;
+}
+
+if (type === "accessories") {
+  container.innerHTML = `
+  
+  <a href="productlist.html?category=womens-shoes">
+    <article class="categoryCard">
+      <h3>Sko</h3>
+    </article>
+  </a>
+
+  <a href="productlist.html?category=womens-bags">
+    <article class="categoryCard">
+      <h3>Tasker</h3>
+    </article>
+  </a>
+
+  <a href="productlist.html?category=womens-jewellery">
+    <article class="categoryCard">
+      <h3>Smykker</h3>
+    </article>
+  </a>
+
+  <a href="productlist.html?category=womens-watches">
+    <article class="categoryCard">
+      <h3>Ure</h3>
+    </article>
+  </a>
+
+  `;
+}
+
+if (type === "beauty") {
+  container.innerHTML = `
+  
+  <a href="productlist.html?category=beauty">
+    <article class="categoryCard">
+      <h3>Makeup</h3>
+    </article>
+  </a>
+
+  <a href="productlist.html?category=skin-care">
+    <article class="categoryCard">
+      <h3>Skincare</h3>
+    </article>
+  </a>
+
+  <a href="productlist.html?category=fragrances">
+    <article class="categoryCard">
+      <h3>Parfume</h3>
+    </article>
+  </a>
+
+  `;
+}
