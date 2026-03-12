@@ -9,32 +9,43 @@
     <script src="js/undercategory.js" defer></script>
     <script src="js/OmOs.js" defer></script>
     <!-- <script src="js/knapper.js" defer></script> -->
-    <title>Under Category</title>
+    <title>About Us</title>
   </head>
 
   <body class="produktliste">
     <header class="mainNav">
       <div class="topRow">
-        <a href="index.html">
+        <a href="">
           <img src="Logo/Logo.svg" alt="AM logo" />
         </a>
-
         <nav class="topNav">
           <a href="#">Search</a>
           <a href="#">Account</a>
           <a href="#">Basket</a>
         </nav>
       </div>
-
       <nav class="categoryNav">
-        <a href="undercategory.html?type=clothes">Clothes</a>
-        <a href="undercategory.html?type=accessories">Accessories</a>
-        <a href="undercategory.html?type=beauty">Beauty</a>
+        <a data-group="Clothes">Clothes</a>
+        <a data-group="Accessories">Accessories</a>
+        <a data-group="Beauty">Beauty</a>
+        <a data-group="AboutUs">About Us</a>
       </nav>
     </header>
 
-    <main id="subcategoryContainer"></main>
+    <main>
+      <section>
+        <h2>Hero Section</h2>
+      </section>
 
-    <footer></footer>
+      <section>
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <button>Links</button>
+      </section>
+
+      <section>Billede Karrousel af forskellige varer.</section>
+    </main>
   </body>
+
+  <footer></footer>
 </html>
