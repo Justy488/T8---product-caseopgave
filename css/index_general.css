@@ -1,0 +1,67 @@
+/* Generelt */
+
+body {
+  margin: 2em;
+}
+
+/* Forside */
+.mainNav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mainNav > * {
+  margin: 0;
+  text-decoration: none;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topNav {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.categoryNav {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+nav a {
+  margin: 1em;
+}
+
+.categoryButtons a {
+  color: black;
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  cursor: pointer;
+}
+
+.subcategoryList {
+  display: flex;
+  justify-content: center;
+}
+
+.subcategory {
+  text-decoration: none;
+  padding: 2em;
+  color: white;
+  background-color: gray;
+  border-radius: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin: 1em;
+  font-size: 1em;
+}
