@@ -5,15 +5,33 @@
     <link rel="stylesheet" href="css/index_general.css" />
     <link rel="stylesheet" href="css/index_layout.css" />
     <link rel="stylesheet" href="css/index_style.css" />
-    <link rel="stylesheet" href="js/index.js" defer />
+    <link rel="stylesheet" href="css/generel.css" />
+    <script src="JS/index.js" defer></script>
 
     <title>Forside</title>
   </head>
   <body>
-    <header>
-      <nav></nav>
+    <header class="mainNav">
+      <div class="topRow">
+        <a href="index.html" class="logo">
+          <h1>Vinted Maison</h1>
+        </a>
+        <nav class="topNav">
+          <a href="#">Search</a>
+          <a href="#">Account</a>
+          <a href="#">Basket</a>
+        </nav>
+      </div>
+      <nav class="categoryNav">
+        <a data-group="Clothes">Clothes</a>
+        <a data-group="Accessories">Accessories</a>
+        <a data-group="Beauty">Beauty</a>
+      </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <section id="mainCategories"></section>
+
+      <section id="subcategories"></section>
+    </main>
   </body>
 </html>
