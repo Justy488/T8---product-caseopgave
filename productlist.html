@@ -1,18 +1,32 @@
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/productlist_general.css" />
-    <link rel="stylesheet" href="css/productlist_layout.css" />
-    <link rel="stylesheet" href="css/productlist_style.css" />
-    <link rel="stylesheet" href="js/productlist.js" defer />
-    <title>Produkt liste</title>
-</head>
-<body>
-    <header>
-        <nav></nav>
+    <script src="JS/productlist.js" defer></script>
+    <script src="JS/knapper.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body class="produktliste">
+    <header class="mainNav">
+      <div class="topRow">
+        <a href="index.html" class="logo">
+          <h1>Vinted Maison</h1>
+        </a>
+        <nav class="topNav">
+          <a href="#">Search</a>
+          <a href="#">Account</a>
+          <a href="#">Basket</a>
+        </nav>
+      </div>
+      <nav class="categoryNav">
+        <a data-group="Clothes">Clothes</a>
+        <a data-group="Accessories">Accessories</a>
+        <a data-group="Beauty">Beauty</a>
+      </nav>
     </header>
-    <main></main>
+    <main class="produktliste"></main>
     <footer></footer>
-</body>
+  </body>
 </html>
