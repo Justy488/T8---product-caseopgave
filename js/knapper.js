@@ -12,6 +12,6 @@ document.querySelectorAll("[data-group]").forEach((btn) => {
     const categories = categoryGroups[group];
 
     // Send brugeren til underkategorier.html
-    window.location.href = `underkategorier.html?group=${group}`;
+    window.location.href = `undercategory.html?group=${group}`;
   });
 });
