@@ -21,7 +21,7 @@ function showProducts(products) {
         <img src="${product.thumbnail}" alt="${product.title}" />
         <p>${product.price} EUR</p>
         <p>${product.availabilityStatus}</p>
-        <a href="produkt.html?id=${product.id}">Buy</a>
+        <a href="productdetails.html?id=${product.id}">Buy</a>
       </article>
     `;
   });

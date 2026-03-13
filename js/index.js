@@ -2,13 +2,7 @@
 
 const categoryGroups = {
   Clothes: ["tops", "womens-dresses"],
-  Accessories: [
-    "womens-jewellery",
-    "womens-shoes",
-    "womens-watches",
-    "womens-bags",
-    "sunglasses",
-  ],
+  Accessories: ["womens-jewellery", "womens-shoes", "womens-watches", "womens-bags", "sunglasses"],
   Beauty: ["skin-care", "fragrances", "beauty"],
 };
 
@@ -30,7 +24,7 @@ function showSubcategories(list, groupName) {
       ${list
         .map(
           (cat) => `
-        <a class="subcategory" href="kategorier.html?category=${cat}">
+        <a class="subcategory" href="productlist.html?category=${cat}">
           ${cat.replace("-", " ")}
         </a>
       `,
