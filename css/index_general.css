@@ -39,6 +39,9 @@ body {
 
 nav a {
   margin: 1em;
+  color: #ddd;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .categoryButtons a {
@@ -64,4 +67,8 @@ nav a {
   padding-right: 2em;
   margin: 1em;
   font-size: 1em;
+}
+
+nav {
+  background-color: transparent;
 }
