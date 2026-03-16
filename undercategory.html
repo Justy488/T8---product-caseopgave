@@ -3,31 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/generel.css" />
-    <script src="JS/underkategorier.js" defer></script>
-    <script src="JS/knapper.js" defer></script>
-    <script src="JS/undercategory.js" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="css/color.css" />
+    <link rel="stylesheet" href="css/undercategory_general.css" />
+    <script src="js/undercategory.js" defer></script>
+    <script src="js/knapper.js" defer></script>
+    <title>Under Category</title>
   </head>
+
   <body class="produktliste">
     <header class="mainNav">
       <div class="topRow">
-        <a href="index.html" class="logo">
-          <h1>Vinted Maison</h1>
+        <a href="index.html">
+          <img src="Logo/Logo.svg" alt="AM logo" />
         </a>
+
         <nav class="topNav">
           <a href="#">Search</a>
           <a href="#">Account</a>
           <a href="#">Basket</a>
         </nav>
       </div>
+
       <nav class="categoryNav">
         <a data-group="Clothes">Clothes</a>
         <a data-group="Accessories">Accessories</a>
         <a data-group="Beauty">Beauty</a>
+        <a href="OmOs.html">About</a>
       </nav>
     </header>
-    <main class="produktliste"></main>
+
+    <main id="subcategoryContainer"></main>
+
     <footer></footer>
   </body>
 </html>

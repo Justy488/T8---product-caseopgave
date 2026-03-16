@@ -1,7 +1,61 @@
 /* Generelt */
+@font-face {
+  font-family: "BBH Bartle";
+  src: url("../fonts/BBH_Bartle/BBHBartle-Regular.ttf");
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2rem;
+}
 
-body {
+@font-face {
+  font-family: "Kugile";
+  src: url("../fonts/kugile/Kugile_Demo.ttf");
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+main {
   margin: 2em;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  background-color: #5c534e;
+  color: #ddd;
+  padding-top: 2em;
+}
+
+footer p {
+  justify-items: center;
+}
+
+.navn {
+  font-family: "BBH Bartle";
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.hours h2 {
+  text-align: center;
+}
+
+.hours p {
+  font-family: "Poppins";
+}
+
+.sociale {
+  text-align: center;
 }
 
 /* Forside */
@@ -74,6 +128,62 @@ nav a {
   border-radius: 0.5em;
   padding-left: 2em;
   padding-right: 2em;
+  margin: 1em;
+  font-size: 1em;
+}
+
+/* Produktliste */
+.produktliste main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 2em;
+}
+
+.collage {
+  grid-column: 1/-1;
+  justify-items: center;
+  max-width: 90%;
+}
+
+.produktliste main h2 {
+  grid-column: 1/-1;
+  font-family: "Kugile";
+  font-size: 2rem;
+}
+
+.produktliste h3 {
+  font-family: "Kugile";
+  font-size: 1rem;
+}
+
+article {
+  margin-bottom: 5rem;
+}
+
+article p {
+  font-family: "Poppins";
+  font-size: 1rem;
+}
+
+.like {
+  width: 5%;
+}
+
+.buy {
+  display: flex;
+  justify-items: center;
+}
+
+.buy a {
+  text-decoration: none;
+  color: white;
+  background-color: #5c534e;
+  border-radius: 0.5em;
+  padding-left: 9em;
+  padding-right: 9em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
   margin: 1em;
   font-size: 1em;
 }
