@@ -95,6 +95,18 @@ nav a {
   margin: 1em;
 }
 
+.aloura {
+  font-family: "BBH Bartle";
+  font-style: normal;
+  font-size: 2em;
+}
+
+.Maison {
+  font-family: "Kugile";
+  font-style: normal;
+  font-size: 1em;
+}
+
 .categoryButtons a {
   color: black;
   padding: 1em;
