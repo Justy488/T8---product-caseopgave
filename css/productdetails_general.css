@@ -1,5 +1,60 @@
-body {
+@font-face {
+  font-family: "BBH Bartle";
+  src: url("../fonts/BBH_Bartle/BBHBartle-Regular.ttf");
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+@font-face {
+  font-family: "Kugile";
+  src: url("../fonts/kugile/Kugile_Demo.ttf");
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+main {
   margin: 2em;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  background-color: #5c534e;
+  color: #ddd;
+  padding-top: 2em;
+}
+
+footer p {
+  justify-items: center;
+}
+
+.navn {
+  font-family: "BBH Bartle";
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.hours h2 {
+  text-align: center;
+}
+
+.hours p {
+  font-family: "Poppins";
+}
+
+.sociale {
+  text-align: center;
 }
 
 /* Forside */
@@ -39,6 +94,18 @@ nav a {
   margin: 1em;
 }
 
+.aloura {
+  font-family: "BBH Bartle";
+  font-style: normal;
+  font-size: 2em;
+}
+
+.Maison {
+  font-family: "Kugile";
+  font-style: normal;
+  font-size: 1em;
+}
+
 .categoryButtons a {
   color: black;
   padding: 1em;
@@ -62,87 +129,4 @@ nav a {
   padding-right: 2em;
   margin: 1em;
   font-size: 1em;
-}
-
-.product {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.productImages {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.mainImage {
-  position: relative;
-}
-
-.mainImage img {
-  width: 100%;
-  border-radius: 20px;
-}
-
-.mainImage button {
-  position: absolute;
-  top: 45%;
-}
-
-.mainImage button:first-child {
-  left: 10px;
-}
-
-.mainImage button:last-child {
-  right: 10px;
-}
-
-.thumbnails {
-  display: flex;
-  gap: 10px;
-}
-
-.thumbnails img {
-  width: 80px;
-  border-radius: 10px;
-}
-
-.productInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.sizes {
-  display: flex;
-  gap: 10px;
-}
-
-.quantity {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  border: #333 solid 1px;
-  max-width: 5.8em;
-}
-
-.addToCart {
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.sizes button.selected {
-  background-color: #333;
-  color: white;
-}
-.description {
-  margin: 4em;
-  border-top: 1px solid black;
-}
-button {
-  background-color: #c7bfb4;
-  border: none;
-  padding: 0.5em 1em;
 }
