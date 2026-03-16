@@ -125,12 +125,13 @@ nav a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
-  margin: 5em;
+  margin: 2em;
 }
 
 .collage {
   grid-column: 1/-1;
   justify-items: center;
+  max-width: 90%;
 }
 
 .produktliste main h2 {
