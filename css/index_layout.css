@@ -1,22 +1,176 @@
-video.video-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Desktop media query - responsiv til pc */
+@media (min-width: 1024px) {
+  video.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: -3;
+  }
+
+  .hero-section {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: -2;
+  }
+  .hero-section {
+    width: 100%;
+    height: 100vh; /* giv headeren en højde */
+    position: relative; /* så children kan positioneres absolut */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .categoryNav {
+    position: absolute;
+    bottom: -2rem; /* sæt den i bunden */
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+  }
+
+  .biglogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3rem;
+    height: 200%;
+  }
+}
+
+/* Her er den respnsiv til mobiler */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 100svh; /* svh er mere præcis på mobil pga. browserens adresselinje */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .biglogo svg {
+    width: 90%; /* skalér logoet ned */
+    height: auto;
+  }
+
+  .biglogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+  }
+
+  .categoryNav {
+    bottom: 1rem;
+    gap: 10px;
+    padding: 1rem;
+  }
+
+  .categoryNav a {
+    font-size: 0.75rem;
+    padding: 0.5em 1em;
+  }
+
+  .topNav a span {
+    display: none; /* skjul tekst ved siden af ikoner, vis kun ikoner */
+  }
+
+  .topNav {
+    gap: 10px;
+  }
+  /* HERO SECTION - header */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* HERO - video container inde i main */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    overflow: hidden;
+  }
+
+  video.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: -1;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 0;
+  }
+}
+
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0; /* fjern side-margin */
+  padding: 3.5rem 0; /* behold vertikal afstand */
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  z-index: -3;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-  z-index: -2;
+@media (max-width: 768px) {
+  .grid_1-1 {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+  }
+
+  .grid_1-1 img {
+    width: 100%;
+    height: auto;
+    order: 2; /* billede under tekst */
+  }
+
+  .grid_1-1 .invert-first {
+    order: 1; /* tekst over billede */
+  }
 }
 
-#biglogo {
+button {
   align-items: center;
+}
+
+/* Rettelse af knapper på hero-section */
+
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: #fff;
+  }
 }
