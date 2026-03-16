@@ -1,0 +1,131 @@
+body {
+  margin: 2em;
+}
+
+/* Forside */
+.mainNav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mainNav > * {
+  margin: 0;
+  text-decoration: none;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topNav {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.categoryNav {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+nav a {
+  margin: 1em;
+}
+
+.categoryButtons a {
+  color: black;
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  cursor: pointer;
+}
+
+.subcategoryList {
+  display: flex;
+  justify-content: center;
+}
+
+.subcategory {
+  text-decoration: none;
+  padding: 2em;
+  color: white;
+  background-color: gray;
+  border-radius: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin: 1em;
+  font-size: 1em;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.productImages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mainImage {
+  position: relative;
+}
+
+.mainImage img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.mainImage button {
+  position: absolute;
+  top: 45%;
+}
+
+.mainImage button:first-child {
+  left: 10px;
+}
+
+.mainImage button:last-child {
+  right: 10px;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+}
+
+.thumbnails img {
+  width: 80px;
+  border-radius: 10px;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sizes {
+  display: flex;
+  gap: 10px;
+}
+
+.quantity {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.addToCart {
+  padding: 10px;
+}
