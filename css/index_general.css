@@ -1,74 +1,153 @@
 /* Generelt */
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* også med fokus på effekterne */
 body {
-  margin: 2em;
-}
-
-/* Forside */
-.mainNav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
-}
-
-.mainNav > * {
   margin: 0;
-  text-decoration: none;
 }
+@media (min-width: 860px) {
+  /* Forside */
+  .mainNav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
 
-.topRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .mainNav > * {
+    margin: 0;
+    text-decoration: none;
+  }
 
-.topNav {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-end;
-}
+  /* hover effekt på iconerne */
 
-.categoryNav {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  padding-top: 10px;
-}
+  /* .topRow a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6em 1.8em; */
+  /* border: 1px solid rgba(255, 255, 255, 0.6);  for et enkelt look*/
+  /* letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease;
+  } */
 
-nav a {
-  margin: 1em;
-  color: #ddd;
-  text-decoration: none;
-  cursor: pointer;
-}
+  .topRow a:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #1a1a1a;
+    border-color: transparent;
+    border-radius: 15px;
+  }
 
-.categoryButtons a {
-  color: black;
-  padding: 1em;
-  padding-left: 2em;
-  padding-right: 2em;
-  cursor: pointer;
-}
+  .topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.subcategoryList {
-  display: flex;
-  justify-content: center;
-}
+  .topNav {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+  }
 
-.subcategory {
-  text-decoration: none;
-  padding: 2em;
-  color: white;
-  background-color: gray;
-  border-radius: 0.5em;
-  padding-left: 2em;
-  padding-right: 2em;
-  margin: 1em;
-  font-size: 1em;
-}
+  /* placering af iconer i toppen */
+  .topNav {
+    margin-left: auto; /* skubber hele nav til højre */
+  }
 
-nav {
-  background-color: transparent;
+  .topNav a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.6em 1.8em;
+  }
+
+  .topNav a:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .categoryNav {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  nav a {
+    margin: 1em;
+    color: #ddd;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  nav {
+    background-color: transparent;
+  }
+
+  nav a::after {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .categoryButtons a {
+    color: black;
+    padding: 1em;
+    margin: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    cursor: pointer;
+  }
+
+  .subcategoryList {
+    display: flex;
+    justify-content: center;
+  }
+
+  .subcategory {
+    text-decoration: none;
+    padding: 2em;
+    color: white;
+    background-color: gray;
+    border-radius: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin: 1em;
+    font-size: 1em;
+  }
+
+  /* tilføjelse af effekt til knapper */
+
+  .categoryNav {
+    transition:
+      transform 0.8s ease,
+      background-color 0.4s ease,
+      padding 0.4s ease;
+    padding: 5rem 3rem;
+  }
+
+  .categoryNav:hover {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem 3rem;
+    padding-bottom: 2rem;
+    margin: 1rem 0;
+  }
+
+  .categoryNav:hover a {
+    color: #1a1a1a;
+    border-color: transparent;
+  }
 }
