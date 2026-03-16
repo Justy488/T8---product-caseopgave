@@ -50,28 +50,11 @@ nav a {
   cursor: pointer;
 }
 
-.subcategoryList {
-  display: flex;
-  justify-content: center;
-}
-
-.subcategory {
-  text-decoration: none;
-  padding: 2em;
-  color: rgb(0, 0, 0);
-  background-color: var(--text-inverse);
-  border-radius: 0.5em;
-  padding-left: 2em;
-  padding-right: 2em;
-  margin: 1em;
-  font-size: 1em;
-}
-
 img {
   min-width: 100px;
 }
 
-/* Undercategory Grid */
+/* Undercategory Grid & Cards */
 
 #subcategoryContainer {
   display: grid;
@@ -86,6 +69,29 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer;
+  justify-content: center;
   text-decoration: none;
+
+  /* Farver */
+  background-color: var(--bg-alt);
+  color: var(--text-inverse);
+
+  /* Typografi */
+  font-family: "Brillant", sans-serif; /* Erstat med vores font!!!!!! */
+  font-size: 1.5rem;
+
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  min-width: 150px;
+  text-align: center;
+}
+
+/* Hover-effekt */
+.categoryCard:hover {
+  background-color: var(--bg-secondary);
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
