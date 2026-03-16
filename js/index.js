@@ -19,7 +19,7 @@ function showSubcategories(list, groupName) {
   const container = document.querySelector("#subcategories");
 
   container.innerHTML = `
-    <h2>${groupName.charAt(0).toUpperCase() + groupName.slice(1)}</h2>
+    <h1>${groupName.charAt(0).toUpperCase() + groupName.slice(1)}</h1>
     <div class="subcategoryList">
       ${list
         .map(
