@@ -8,14 +8,14 @@ const container = document.querySelector("#subcategoryContainer");
 const subcategories = {
   Clothes: [
     { name: "Tops", category: "tops" },
-    { name: "Kjoler", category: "womens-dresses" },
+    { name: "Dresses", category: "womens-dresses" },
   ],
 
   Accessories: [
-    { name: "Sko", category: "womens-shoes" },
-    { name: "Tasker", category: "womens-bags" },
-    { name: "Smykker", category: "womens-jewellery" },
-    { name: "Ure", category: "womens-watches" },
+    { name: "Shoes", category: "womens-shoes" },
+    { name: "Bags", category: "womens-bags" },
+    { name: "Jewellery", category: "womens-jewellery" },
+    { name: "Watches", category: "womens-watches" },
   ],
 
   Beauty: [
