@@ -33,6 +33,7 @@ footer {
   justify-items: center;
   background-color: #5c534e;
   color: #ddd;
+  padding-top: 2em;
 }
 
 footer p {
@@ -43,6 +44,10 @@ footer p {
   font-family: "BBH Bartle";
   font-style: normal;
   font-size: 2rem;
+}
+
+.hours h2 {
+  text-align: center;
 }
 
 .hours p {
