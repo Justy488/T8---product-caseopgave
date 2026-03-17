@@ -22,6 +22,13 @@
   font-size: 2rem;
 }
 
+@font-face {
+  font-family: "Brillant";
+  src: url("/fonts/brillant/brillant.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 main {
   margin: 2em;
 }
@@ -32,7 +39,8 @@ footer {
   justify-items: center;
   background-color: #5c534e;
   color: #ddd;
-  padding-top: 2em;
+  padding: 2em;
+  margin: 0;
 }
 
 footer p {
@@ -45,8 +53,10 @@ footer p {
   font-size: 2rem;
 }
 
-.hours h2 {
-  text-align: center;
+.hours h3 {
+  font-family: "Kugile";
+  font-style: normal;
+  font-size: 1em;
 }
 
 .hours p {
@@ -55,6 +65,12 @@ footer p {
 
 .sociale {
   text-align: center;
+}
+
+.sociale h3 {
+  font-family: "Kugile";
+  font-style: normal;
+  font-size: 1em;
 }
 
 /* Forside */
@@ -71,6 +87,13 @@ footer p {
   text-decoration: none;
 }
 
+.topRow a:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  border-color: transparent;
+  border-radius: 15px;
+}
+
 .topRow {
   display: flex;
   justify-content: space-between;
@@ -83,11 +106,29 @@ footer p {
   justify-content: flex-end;
 }
 
+.topNav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #000000;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.6em 1.8em;
+}
+
 .categoryNav {
   display: flex;
   gap: 25px;
   justify-content: center;
   padding-top: 10px;
+}
+
+.categoryNav a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
 }
 
 nav a {

@@ -22,10 +22,17 @@
 
 @font-face {
   font-family: "Orange Avenue";
-  src: url("/fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf")
-    format("truetype");
+  src: url("/fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2rem;
 }
 
 /* Generelt */
@@ -80,7 +87,8 @@ nav a {
 }
 
 img {
-  min-width: 100px;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Undercategory Grid & Cards */
@@ -177,34 +185,60 @@ footer p {
   text-align: center;
 }
 
-/* @media (max-width: 768px) { */
-/* placering af iconer i toppen */
-.topNav {
-  margin-left: auto; /* skubber hele nav til højre */
-}
+/* Responsiv til Mobil */
 
-.topNav a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: black;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 0.6em 1.8em;
-}
+@media (max-width: 768px) {
+  /* NAV container */
+  .topRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
 
-.topNav a:hover {
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-.topNav a span {
-  display: none; /* skjul tekst ved siden af ikoner, vis kun ikoner */
-}
+  /* Logo */
+  .logo img {
+    max-width: 120px;
+  }
 
-.topNav {
-  gap: 10px;
+  /* Top icons/nav */
+  .topNav {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 0;
+  }
+
+  .topNav a {
+    font-size: 0.9rem;
+    padding: 0.4em 0.8em;
+  }
+
+  /* Category nav */
+  .categoryNav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .categoryNav a {
+    font-size: 1rem;
+  }
+
+  #subcategoryContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    max-width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    justify-items: center;
+  }
+
+  .categoryCard {
+    width: 100%;
+    max-width: 300px;
+  }
 }
-/* }
-} */

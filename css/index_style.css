@@ -22,10 +22,17 @@
 
 @font-face {
   font-family: "Orange Avenue";
-  src: url("/fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf")
-    format("truetype");
+  src: url("/fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins/Poppins-ExtraLight.ttf");
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2rem;
 }
 
 a {
@@ -108,7 +115,7 @@ p {
   margin: 1rem;
 }
 
-.footer-bg {
+/* .footer-bg {
   background-color: #5c534e;
   padding: 3rem 1rem;
   color: #fff;
@@ -116,4 +123,46 @@ p {
 
 .foot-logo {
   margin: 2em;
+} */
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  background-color: #5c534e;
+  color: #ddd;
+  padding: 2em;
+  margin: 0;
+}
+
+footer p {
+  padding: 0.5em;
+  justify-items: center;
+}
+
+.navn {
+  font-family: "BBH Bartle";
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.hours h4 {
+  font-family: "Kugile";
+  font-style: normal;
+  font-size: 1em;
+}
+
+.hours p {
+  font-family: "Poppins";
+  font-style: normal;
+}
+
+.sociale {
+  text-align: center;
+}
+
+.sociale h4 {
+  font-family: "Kugile";
+  font-style: normal;
+  font-size: 1em;
 }
