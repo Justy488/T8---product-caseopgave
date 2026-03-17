@@ -8,27 +8,32 @@ const container = document.querySelector("#subcategoryContainer");
 const subcategories = {
   Clothes: [
     { name: "Tops", category: "tops" },
-    { name: "Dresses", category: "womens-dresses" },
+    { name: "Womens Dresses", category: "womens-dresses" },
   ],
 
   Accessories: [
-    { name: "Shoes", category: "womens-shoes" },
-    { name: "Bags", category: "womens-bags" },
     { name: "Jewellery", category: "womens-jewellery" },
+    { name: "Shoes", category: "womens-shoes" },
     { name: "Watches", category: "womens-watches" },
+    { name: "Bags", category: "womens-bags" },
+    { name: "Sunglasses", category: "Sunglasses" },
   ],
 
   Beauty: [
-    { name: "Makeup", category: "beauty" },
     { name: "Skincare", category: "skin-care" },
-    { name: "Parfume", category: "fragrances" },
+    { name: "Fragrances", category: "fragrances" },
+    { name: "Makeup", category: "beauty" },
   ],
 };
 
 subcategories[group].forEach((item) => {
-  container.innerHTML += `
+  container.insertAdjacentHTML(
+    "beforeend",
+    `
     <a href="productlist.html?category=${item.category}" class="categoryCard">
+      <img src="billeder/${item.category}.webp" alt="${item.name}">
       <p>${item.name}</p>
     </a>
-  `;
+    `,
+  );
 });

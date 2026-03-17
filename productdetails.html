@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -5,14 +6,44 @@
     <link rel="stylesheet" href="css/productdetails_general.css" />
     <link rel="stylesheet" href="css/productdetails_layout.css" />
     <link rel="stylesheet" href="css/productdetails_style.css" />
-    <link rel="stylesheet" href="js/productdetails.js" defer />
-    <title>Produkt detaljer</title>
+    <script src="js/productdetails.js" defer></script>
+    <script src="JS/knapper.js" defer></script>
+    <title>Document</title>
   </head>
   <body>
-    <header>
-      <nav></nav>
+    <header class="mainNav">
+      <div class="topRow">
+        <a href="">
+          <img src="Logo/Logo.svg" alt="AM logo" />
+        </a>
+        <nav class="topNav">
+          <a href="#">Search</a>
+          <a href="#">Account</a>
+          <a href="#">Basket</a>
+        </nav>
+      </div>
+      <nav class="categoryNav">
+        <a data-group="Clothes">Clothes</a>
+        <a data-group="Accessories">Accessories</a>
+        <a data-group="Beauty">Beauty</a>
+        <a href="OmOs.html">About</a>
+      </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main id="productcontainer"></main>
+    <footer>
+      <div class="navn">
+        <img src="billeder/Aloura Maison_foot.svg" alt="" />
+      </div>
+      <div class="hours">
+        <h3>Opening hours</h3>
+        <p>Mon - Tue: 10:00 - 21:30</p>
+        <p>Wed - Thu: 10:00 - 22:00</p>
+        <p>Fri - Son: 10:00 - 23:00</p>
+      </div>
+      <div class="sociale">
+        <h3>Find us</h3>
+        <img src="billeder/someicons.svg" alt="" />
+      </div>
+    </footer>
   </body>
 </html>
