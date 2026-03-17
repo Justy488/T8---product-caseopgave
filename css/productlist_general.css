@@ -72,6 +72,13 @@ footer p {
   text-decoration: none;
 }
 
+.topRow a:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  border-color: transparent;
+  border-radius: 15px;
+}
+
 .topRow {
   display: flex;
   justify-content: space-between;
