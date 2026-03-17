@@ -162,7 +162,7 @@ nav a {
 .collage {
   grid-column: 1/-1;
   justify-items: center;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .produktliste main h2 {
