@@ -27,6 +27,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
 h2 {
   align-content: center;
   font-family: moralana;

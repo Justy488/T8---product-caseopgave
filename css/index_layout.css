@@ -1,70 +1,94 @@
-/* Desktop media query - responsiv til pc */
+/* =============================================
+   LAYOUT CSS — baseret på faktisk HTML-struktur:
+   
+   <header.hero-section>
+     <div.topRow>
+     <section>
+       <div.biglogo>
+       <nav.categoryNav>
+     </section>
+     <div.hero>          ← video-container
+   </header>
+   ============================================= */
+
+/* ---- Basis (gælder altid) ---- */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* video-wrapper ligger absolut BAG alt indhold */
+.hero {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+video.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* topRow og section ligger OVER videoen */
+.topRow,
+.hero-section > section {
+  position: relative;
+  z-index: 2;
+}
+
+/* section fylder resten og bruges som anker for categoryNav */
+.hero-section > section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ---- Desktop (min-width: 1024px) ---- */
 @media (min-width: 1024px) {
-  video.video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    z-index: -3;
-  }
-
   .hero-section {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.25);
-    z-index: -2;
-  }
-  .hero-section {
-    width: 100%;
-    height: 100vh; /* giv headeren en højde */
-    position: relative; /* så children kan positioneres absolut */
-    display: flex;
-    flex-direction: column;
-  }
-
-  .categoryNav {
-    position: absolute;
-    bottom: -2rem; /* sæt den i bunden */
-    left: 0;
-    right: 0;
-    display: flex;
-    gap: 25px;
-    justify-content: center;
+    height: 100vh;
   }
 
   .biglogo {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 3rem;
-    height: 200%;
+    flex: 1;
+    padding-top: 2rem;
+  }
+
+  .categoryNav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding-bottom: 2rem;
   }
 }
 
-/* Her er den respnsiv til mobiler */
+/* ---- Mobil (max-width: 768px) ---- */
 @media (max-width: 768px) {
   .hero-section {
-    height: 100svh; /* svh er mere præcis på mobil pga. browserens adresselinje */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .biglogo svg {
-    width: 90%; /* skalér logoet ned */
-    height: auto;
+    height: 100svh;
   }
 
   .biglogo {
@@ -72,12 +96,25 @@
     justify-content: center;
     align-items: center;
     padding-top: 4rem;
+    flex: 1;
+  }
+
+  .biglogo svg {
+    width: 85%;
+    height: auto;
+    max-width: 400px;
   }
 
   .categoryNav {
+    position: absolute;
     bottom: 1rem;
-    gap: 10px;
-    padding: 1rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 0.5rem 1rem;
   }
 
   .categoryNav a {
@@ -86,61 +123,33 @@
   }
 
   .topNav a span {
-    display: none; /* skjul tekst ved siden af ikoner, vis kun ikoner */
+    display: none;
   }
 
   .topNav {
     gap: 10px;
   }
-  /* HERO SECTION - header */
-  .hero-section {
-    position: relative;
-    width: 100%;
-    height: 100svh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-
-  /* HERO - video container inde i main */
-  .hero {
-    position: relative;
-    width: 100%;
-    height: 100svh;
-    overflow: hidden;
-  }
-
-  video.video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    z-index: -1;
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.25);
-    z-index: 0;
-  }
 }
+
+/* =============================================
+   GRID-LAYOUTS
+   ============================================= */
 
 .grid_1-1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0; /* fjern side-margin */
-  padding: 3.5rem 0; /* behold vertikal afstand */
+  padding: 3.5rem 0;
   width: 100%;
+}
+
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: #fff;
 }
 
 .perf-cardimg {
   width: 90%;
-  align-items: center;
   margin-left: 2.5rem;
   border-radius: 20px;
 }
@@ -154,48 +163,35 @@
   .grid_1-1 img {
     width: 100%;
     height: auto;
-    order: 2; /* billede under tekst */
+    order: 2;
   }
 
   .grid_1-1 .invert-first {
-    order: 1; /* tekst over billede */
+    order: 1;
   }
 
   .grid_1-1-1 {
-    display: grid;
     grid-template-columns: 1fr;
-    color: #fff;
   }
+
   .perf-cardimg {
     width: 90%;
-    align-items: center;
     margin-left: 2.5rem;
     border-radius: 20px;
   }
+
   .perf-cardimg02 {
     width: 90%;
-    align-items: center;
-
     border-radius: 20px;
   }
-  /* Contact Button */
+
   .about-btn {
-    margin-top: 2rem;
     padding: 0.7rem 2rem;
     border-radius: 30px;
     border: none;
     background: #8a817c;
     color: white;
     cursor: pointer;
-    align-items: center;
     margin: 1rem;
   }
-}
-
-/* Rettelse af knapper på hero-section */
-
-.grid_1-1-1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  color: #fff;
 }
