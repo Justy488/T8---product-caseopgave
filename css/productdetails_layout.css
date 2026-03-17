@@ -1,0 +1,77 @@
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.sizes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2em;
+}
+
+.quantity {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: #333 solid 1px;
+  max-width: 5.9em;
+  margin-bottom: 2em;
+  border-radius: 1em;
+}
+
+.sizes button.selected {
+  background-color: #333;
+  color: white;
+}
+
+.beskrivelse {
+  margin: 4em;
+  border-top: 1px solid black;
+  padding: 2em;
+  text-align: center;
+}
+
+.boverskrift {
+  margin-left: 4em;
+  margin-bottom: -2em;
+  color: #333;
+}
+button {
+  background-color: #c7bfb4;
+  border: none;
+  padding: 0.5em 1em;
+}
+
+.price {
+  text-decoration: underline;
+}
+
+.salelinje {
+  display: flex;
+  margin-top: 2em;
+}
+
+.sale {
+  background-color: pink;
+  border-radius: 5em;
+  padding: 0.5em;
+  margin-left: 8em;
+}
+button {
+  border-radius: 1em;
+}
+
+.buynow:hover {
+  background-color: #333;
+  color: white;
+}
+
+.hjerte {
+  margin-left: 1em;
+  font-size: 30px;
+}
+.hjerte:hover {
+  color: pink;
+}
