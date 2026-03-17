@@ -129,7 +129,7 @@ body {
   }
 
   /* tilføjelse af effekt til knapper */
-
+  
   .categoryNav {
     transition:
       transform 0.8s ease,
