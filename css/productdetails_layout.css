@@ -84,14 +84,20 @@ button {
 }
 
 /* knapper til at vise flere billeder */
+
+.image-indicators {
+  margin-left: 10em;
+}
 .dot {
   width: 10px;
   height: 10px;
   background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .dot:first-child {
-  background-color: black;
+  background-color: pink;
 }
 .billede {
   display: block;
