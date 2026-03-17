@@ -54,7 +54,9 @@ fetch(`https://dummyjson.com/products/${id}`)
             }
           </div>
   <button class="buynow">Læg i kurven</button>
-  
+  <p class="småp"> <span>⌂ </span>Fri fragt ved køb over 600 kr. (pakkeshop)</p>
+<p class="småp"><span>⌚︎</span> Hurtig levering: 1-3 hverdage</p>
+<p class="småp"><span>↩︎ </span>14 dages returret</p>
         </section>
       </article>
 
