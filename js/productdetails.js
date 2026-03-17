@@ -8,15 +8,21 @@ fetch(`https://dummyjson.com/products/${id}`)
   .then((res) => res.json())
   .then((product) => {
     if (!product || product.message) {
-      productContainer.innerHTML = "<p>Produkt ikke fundet!</p>";
+      productContainer.innerHTML = "<p></p>";
       return;
     }
 
     const discountedPrice = product.discountPercentage ? Math.round(product.price * (1 - product.discountPercentage / 100)) : null;
 
     productContainer.innerHTML = `
+           <div class="image-indicators">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
       <article class="product">
-        <img src="${product.thumbnail}" alt="${product.title}" />
+        <img class="billede" src="${product.thumbnail}" alt="${product.title}" />
+ 
         <section>
           <h2>${product.title} <span class="hjerte">♡</span></h2>
 
@@ -48,6 +54,7 @@ fetch(`https://dummyjson.com/products/${id}`)
             }
           </div>
   <button class="buynow">Læg i kurven</button>
+  
         </section>
       </article>
 
@@ -82,10 +89,9 @@ fetch(`https://dummyjson.com/products/${id}`)
 
     sizeButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        // Fjern 'selected' fra alle knapper først
         sizeButtons.forEach((btn) => btn.classList.remove("selected"));
-        // Tilføj 'selected' på den knap der blev klikket
+
         button.classList.add("selected");
       });
     });
-  }); // end fetch
+  });
