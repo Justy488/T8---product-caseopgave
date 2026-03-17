@@ -22,7 +22,8 @@
 
 @font-face {
   font-family: "Orange Avenue";
-  src: url("/fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf") format("truetype");
+  src: url("/fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -32,7 +33,7 @@
 body {
   margin: 0;
 }
-
+/* @media (min-width: 1024px) { */
 .mainNav {
   display: flex;
   flex-direction: column;
@@ -86,7 +87,7 @@ img {
 
 #subcategoryContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
 
   max-width: 900px;
@@ -175,3 +176,35 @@ footer p {
 .sociale {
   text-align: center;
 }
+
+/* @media (max-width: 768px) { */
+/* placering af iconer i toppen */
+.topNav {
+  margin-left: auto; /* skubber hele nav til højre */
+}
+
+.topNav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: black;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.6em 1.8em;
+}
+
+.topNav a:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+.topNav a span {
+  display: none; /* skjul tekst ved siden af ikoner, vis kun ikoner */
+}
+
+.topNav {
+  gap: 10px;
+}
+/* }
+} */
