@@ -207,3 +207,62 @@ footer p {
 .sociale {
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  /* NAV */
+  .topRow {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .topNav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .topNav a {
+    font-size: 0.7rem;
+    padding: 0.4em 1em;
+  }
+
+  .categoryNav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* HERO */
+  .hero {
+    height: 60vh;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 3rem 1rem;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+  }
+
+  .about p {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  /* CAROUSEL */
+  .carousel-container {
+    gap: 30px;
+  }
+
+  .carousel-container img {
+    width: 150px;
+  }
+
+  /* FOOTER */
+  footer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
