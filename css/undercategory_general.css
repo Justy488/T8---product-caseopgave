@@ -1,0 +1,177 @@
+/* Fonts */
+@font-face {
+  font-family: "Kugile";
+  src: url("../fonts/kugile/Kugile_Demo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BBH Bartle";
+  src: url("../fonts/BBH_Bartle/BBHBartle-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brillant";
+  src: url("../fonts/brillant/brillant.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Orange Avenue";
+  src: url("../fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Generelt */
+
+body {
+  margin: 0;
+}
+
+.mainNav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mainNav > * {
+  margin: 0;
+  text-decoration: none;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topNav {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.categoryNav {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+nav a {
+  margin: 1em;
+}
+
+.categoryButtons a {
+  color: var(--text-primary);
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  cursor: pointer;
+}
+
+img {
+  min-width: 100px;
+}
+
+/* Undercategory Grid & Cards */
+
+#subcategoryContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+
+  max-width: 900px;
+  margin: 4rem auto;
+}
+
+.categoryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  color: var(--text-primary);
+
+  font-family: "Kugile", serif;
+  font-size: 1.5rem;
+
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  min-width: 150px;
+  text-align: center;
+}
+
+/* Hover-effekt */
+.categoryCard:hover {
+  background-color: var(--bg-alt);
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.categoryCard img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.topNav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #000000;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.6em 1.8em;
+}
+
+.categoryNav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Footer */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  background-color: #5c534e;
+  color: #ddd;
+  padding-top: 2em;
+}
+
+footer p {
+  justify-items: center;
+}
+
+.navn {
+  font-family: "BBH Bartle";
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.hours h2 {
+  text-align: center;
+}
+
+.hours p {
+  font-family: "Poppins";
+}
+
+.sociale {
+  text-align: center;
+}
