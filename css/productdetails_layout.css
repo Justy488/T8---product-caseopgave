@@ -40,6 +40,7 @@
   margin-bottom: -2em;
   color: #333;
 }
+
 button {
   background-color: #c7bfb4;
   border: none;
@@ -54,6 +55,12 @@ button {
 .salelinje {
   display: flex;
   margin-top: 2em;
+}
+
+.salelinje p {
+  font-family: "Poppins";
+  font-style: normal;
+  text-decoration: none;
 }
 
 .sale {

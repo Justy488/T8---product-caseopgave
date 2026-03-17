@@ -23,6 +23,13 @@
   font-size: 2rem;
 }
 
+@font-face {
+  font-family: "Orange Avenue";
+  src: url("/fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 main {
   margin: 2em;
 }
@@ -168,7 +175,7 @@ nav a {
 }
 
 .produktliste h3 {
-  font-family: "Kugile";
+  font-family: "Brilliant";
   font-size: 1rem;
 }
 
