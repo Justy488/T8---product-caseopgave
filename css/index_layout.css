@@ -158,6 +158,7 @@ video.video-bg {
   .grid_1-1 {
     grid-template-columns: 1fr;
     margin: 1rem;
+    margin: 1rem;
   }
 
   .grid_1-1 img {
@@ -176,12 +177,7 @@ video.video-bg {
 
   .perf-cardimg {
     width: 90%;
-    margin-left: 2.5rem;
-    border-radius: 20px;
-  }
-
-  .perf-cardimg02 {
-    width: 90%;
+    margin-left: 1.5rem;
     border-radius: 20px;
   }
 
