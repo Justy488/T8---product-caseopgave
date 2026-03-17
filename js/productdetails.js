@@ -8,7 +8,7 @@ fetch(`https://dummyjson.com/products/${id}`)
   .then((res) => res.json())
   .then((product) => {
     if (!product || product.message) {
-      productContainer.innerHTML = "<p>Produkt ikke fundet!</p>";
+      productContainer.innerHTML = "<p></p>";
       return;
     }
 
