@@ -138,6 +138,13 @@
   width: 100%;
 }
 
+.perf-cardimg {
+  width: 90%;
+  align-items: center;
+  margin-left: 2.5rem;
+  border-radius: 20px;
+}
+
 @media (max-width: 768px) {
   .grid_1-1 {
     grid-template-columns: 1fr;
@@ -153,6 +160,24 @@
   .grid_1-1 .invert-first {
     order: 1; /* tekst over billede */
   }
+
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: #fff;
+  }
+  .perf-cardimg {
+    width: 90%;
+    align-items: center;
+    margin-left: 2.5rem;
+    border-radius: 20px;
+  }
+  .perf-cardimg02 {
+    width: 90%;
+    align-items: center;
+
+    border-radius: 20px;
+  }
 }
 
 button {
@@ -165,12 +190,4 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   color: #fff;
-}
-
-@media (max-width: 768px) {
-  .grid_1-1-1 {
-    display: grid;
-    grid-template-columns: 1fr;
-    color: #fff;
-  }
 }

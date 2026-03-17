@@ -72,6 +72,13 @@ footer p {
   text-decoration: none;
 }
 
+.topRow a:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  border-color: transparent;
+  border-radius: 15px;
+}
+
 .topRow {
   display: flex;
   justify-content: space-between;
@@ -82,6 +89,18 @@ footer p {
   display: flex;
   gap: 20px;
   justify-content: flex-end;
+}
+
+.topNav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #000000;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.6em 1.8em;
 }
 
 .categoryNav {
@@ -143,7 +162,7 @@ nav a {
 .collage {
   grid-column: 1/-1;
   justify-items: center;
-  max-width: 90%;
+  max-width: 100%;
 }
 
 .produktliste main h2 {

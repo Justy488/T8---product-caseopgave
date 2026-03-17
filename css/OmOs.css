@@ -1,10 +1,38 @@
+/* Fonts */
+@font-face {
+  font-family: "Kugile";
+  src: url("/fonts/kugile/Kugile_Demo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BBH Bartle";
+  src: url("/fonts/BBH_Bartle/BBHBartle-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brillant";
+  src: url("/fonts/brillant/brillant.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Orange Avenue";
+  src: url("/fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Generelt */
 
 body {
-  margin: 2em;
+  margin: 0;
 }
 
-/* Forside */
 .mainNav {
   display: flex;
   flex-direction: column;
@@ -38,6 +66,11 @@ body {
   cursor: pointer;
 }
 
+.categoryNav a {
+  text-decoration: none;
+  color: inherit;
+}
+
 nav a {
   margin: 1em;
 }
@@ -52,4 +85,125 @@ nav a {
 
 img {
   min-width: 100px;
+}
+
+.topNav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #000000;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.6em 1.8em;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  height: 100svh;
+  background-image: url("../billeder/everything.webp");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* About Us Section */
+.about {
+  background-color: #5c534e;
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: "Brillant", serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.about p {
+  font-family: "Orange Avenue", serif;
+  max-width: 520px;
+  margin: 1rem auto;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Contact Button */
+.contact-btn {
+  margin-top: 2rem;
+  padding: 0.7rem 2rem;
+  border-radius: 30px;
+  border: none;
+  background: #8a817c;
+  color: white;
+  cursor: pointer;
+}
+
+/* Carousel Section */
+.carousel {
+  background: white;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  animation: scrollCarousel 25s linear infinite;
+}
+
+.carousel-container a {
+  display: block;
+}
+
+.carousel-container img {
+  width: 240px;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Footer */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  background-color: #5c534e;
+  color: #ddd;
+  padding-top: 2em;
+}
+
+footer p {
+  justify-items: center;
+}
+
+.navn {
+  font-family: "BBH Bartle";
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.hours h2 {
+  text-align: center;
+}
+
+.hours p {
+  font-family: "Poppins";
+}
+
+.sociale {
+  text-align: center;
 }

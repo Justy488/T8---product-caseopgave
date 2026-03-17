@@ -74,6 +74,25 @@ p {
 .brown .invert-first {
   background-color: #5c534e;
   color: #fff;
+  margin-left: 1rem;
+}
+.about-btn {
+  margin-top: 2rem;
+  padding: 0.7rem 2rem;
+  border-radius: 30px;
+  border: none;
+  background: #8a817c;
+  color: white;
+  cursor: pointer;
+  align-items: center;
+  text-decoration: none;
+}
+
+.about-btn:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #1a1a1a;
+  border-color: transparent;
+  border-radius: 20px;
 }
 
 .info-card {
