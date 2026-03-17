@@ -177,12 +177,6 @@ footer p {
   text-align: center;
 }
 
-/* @media (max-width: 768px) { */
-/* placering af iconer i toppen */
-.topNav {
-  margin-left: auto; /* skubber hele nav til højre */
-}
-
 /* Responsiv til Mobil */
 
 @media (max-width: 768px) {
@@ -228,15 +222,15 @@ footer p {
     grid-template-columns: 1fr;
     gap: 2rem;
 
-    max-width: 100%; /* 🔥 vigtigt */
+    max-width: 100%;
     margin: 2rem auto;
     padding: 0 1rem;
 
-    justify-items: center; /* 🔥 centrer cards */
+    justify-items: center;
   }
 
   .categoryCard {
     width: 100%;
-    max-width: 300px; /* 🔥 giver pæn card bredde */
+    max-width: 300px;
   }
 }
