@@ -33,7 +33,8 @@ footer {
   justify-items: center;
   background-color: #5c534e;
   color: #ddd;
-  padding-top: 2em;
+  padding: 2em;
+  margin: 0;
 }
 
 footer p {
@@ -156,13 +157,14 @@ nav a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
-  margin: 2em;
+  margin: 4em;
 }
 
 .collage {
   grid-column: 1/-1;
   justify-items: center;
-  max-width: 100%;
+  width: 100%;
+  margin: 0;
 }
 
 .produktliste main h2 {
