@@ -91,6 +91,18 @@ footer p {
   justify-content: flex-end;
 }
 
+.topNav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #000000;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.6em 1.8em;
+}
+
 .categoryNav {
   display: flex;
   gap: 25px;
