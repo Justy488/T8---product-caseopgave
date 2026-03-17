@@ -111,20 +111,13 @@ footer p {
   padding-top: 10px;
 }
 
+.categoryNav a {
+  text-decoration: none;
+  color: #000000;
+}
+
 nav a {
   margin: 1em;
-}
-
-.aloura {
-  font-family: "BBH Bartle";
-  font-style: normal;
-  font-size: 2em;
-}
-
-.Maison {
-  font-family: "Kugile";
-  font-style: normal;
-  font-size: 1em;
 }
 
 .categoryButtons a {
