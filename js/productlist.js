@@ -12,7 +12,7 @@ fetch(`https://dummyjson.com/products/category/${category}?limit=52`)
   });
 
 function showProducts(products) {
-  productContainer.innerHTML = `<img src="billeder/collage.jpg" alt="collage" class="collage">
+  productContainer.innerHTML = `<img src="billeder/banner2.png" alt="" class="collage">
     <h2>${category}</h2>`;
 
   products.forEach((product) => {
