@@ -1,18 +1,47 @@
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/productlist_general.css" />
-    <link rel="stylesheet" href="css/productlist_layout.css" />
-    <link rel="stylesheet" href="css/productlist_style.css" />
-    <link rel="stylesheet" href="js/productlist.js" defer />
-    <title>Produkt liste</title>
-</head>
-<body>
-    <header>
-        <nav></nav>
+    <script src="JS/productlist.js" defer></script>
+    <script src="JS/knapper.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body class="produktliste">
+    <header class="mainNav">
+      <div class="topRow">
+        <a href="index.html" class="logo">
+          <h1 class="Aloura">Aloura</h1>
+          <h2 class="Maison">Maison</h2>
+        </a>
+        <nav class="topNav">
+          <a href="#">Search</a>
+          <a href="#">Account</a>
+          <a href="#">Basket</a>
+        </nav>
+      </div>
+      <nav class="categoryNav">
+        <a data-group="Clothes">Clothes</a>
+        <a data-group="Accessories">Accessories</a>
+        <a data-group="Beauty">Beauty</a>
+      </nav>
     </header>
-    <main></main>
-    <footer></footer>
-</body>
+    <main class="produktliste"></main>
+    <footer>
+      <div class="navn">
+        <img src="billeder/Aloura Maison_foot.svg" alt="" />
+      </div>
+      <div class="hours">
+        <h3>Opening hours</h3>
+        <p>Mon - Tue: 10:00 - 21:30</p>
+        <p>Wed - Thu: 10:00 - 22:00</p>
+        <p>Fri - Son: 10:00 - 23:00</p>
+      </div>
+      <div class="sociale">
+        <h3>Find us</h3>
+        <img src="billeder/someicons.svg" alt="" />
+      </div>
+    </footer>
+  </body>
 </html>

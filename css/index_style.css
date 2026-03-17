@@ -1,0 +1,62 @@
+h2 {
+  align-content: center;
+  font-family: moralana;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 60px 20px 20px;
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  padding-bottom: 0;
+}
+
+h3 {
+  font-family: brillant;
+  text-align: center;
+  color: rgba(10, 9, 9, 0.9);
+  margin: auto;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+h4 {
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+p {
+  align-content: center;
+  font-family: Orange Avenue DEMO;
+  text-align: left;
+
+  max-width: 70ch;
+  padding: 20px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.section-text {
+  align-content: center;
+}
+.white {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.brown .invert-first {
+  background-color: #5c534e;
+  color: #fff;
+}
+
+.info-card {
+  margin: 1rem;
+}
+
+.footer-bg {
+  background-color: #5c534e;
+  padding: 3rem 1rem;
+  color: #fff;
+}
+
+.foot-logo {
+  margin: 2em;
+}

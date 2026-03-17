@@ -1,0 +1,15 @@
+/*----- Color -----*/
+:root {
+  /*---- BAGGRUNDE ----*/
+  --bg-primary: #4a6723;
+  --bg-secondary: #783e16;
+  --bg-alt: #5c534e;
+
+  /*---- TEKST ----*/
+  --text-primary: #0d0a11;
+  --text-inverse: #c7bfb4;
+
+  /*---- CTA ----*/
+  --cta-bg: #4a6723;
+  --cta-text: #c7bfb4;
+}
