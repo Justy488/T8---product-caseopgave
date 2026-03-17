@@ -178,10 +178,18 @@
 
     border-radius: 20px;
   }
-}
-
-button {
-  align-items: center;
+  /* Contact Button */
+  .about-btn {
+    margin-top: 2rem;
+    padding: 0.7rem 2rem;
+    border-radius: 30px;
+    border: none;
+    background: #8a817c;
+    color: white;
+    cursor: pointer;
+    align-items: center;
+    margin: 1rem;
+  }
 }
 
 /* Rettelse af knapper på hero-section */
