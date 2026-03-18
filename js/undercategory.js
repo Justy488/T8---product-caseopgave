@@ -37,3 +37,5 @@ subcategories[group].forEach((item) => {
     `,
   );
 });
+
+/* */
