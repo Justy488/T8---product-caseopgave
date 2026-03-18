@@ -1,29 +1,28 @@
 /* Fonts */
 @font-face {
   font-family: "Kugile";
-  src: url("/fonts/kugile/Kugile_Demo.ttf") format("truetype");
+  src: url("../fonts/kugile/Kugile_Demo.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "BBH Bartle";
-  src: url("/fonts/BBH_Bartle/BBHBartle-Regular.ttf") format("truetype");
+  src: url("../fonts/BBH_Bartle/BBHBartle-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Brillant";
-  src: url("/fonts/brillant/brillant.otf") format("opentype");
+  src: url("../fonts/brillant/brillant.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Orange Avenue";
-  src: url("/fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf")
-    format("truetype");
+  src: url("../fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
