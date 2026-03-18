@@ -15,8 +15,14 @@ fetch(`https://dummyjson.com/products/${id}`)
     const discountedPrice = product.discountPercentage ? Math.round(product.price * (1 - product.discountPercentage / 100)) : null;
 
     productContainer.innerHTML = `
+           <div class="image-indicators">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
       <article class="product">
-        <img src="${product.thumbnail}" alt="${product.title}" />
+        <img class="billede" src="${product.thumbnail}" alt="${product.title}" />
+ 
         <section>
           <h2>${product.title} <span class="hjerte">♡</span></h2>
 
@@ -48,10 +54,13 @@ fetch(`https://dummyjson.com/products/${id}`)
             }
           </div>
   <button class="buynow">Læg i kurven</button>
+  <p class="småp"> <span>⌂ </span>Free shipping on purchases over EUR 600 (package shop)</p>
+<p class="småp"><span>⌚︎</span> Fast delivery: 1-3 busniess days</p>
+<p class="småp"><span>↩︎ </span>14-day return policy</p>
         </section>
       </article>
 
-      <p class="boverskrift">Beskrivelse:</p>
+      <p class="boverskrift">Description:</p>
       <p class="beskrivelse">${product.description}</p>
     `;
 
@@ -82,10 +91,9 @@ fetch(`https://dummyjson.com/products/${id}`)
 
     sizeButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        // Fjern 'selected' fra alle knapper først
         sizeButtons.forEach((btn) => btn.classList.remove("selected"));
-        // Tilføj 'selected' på den knap der blev klikket
+
         button.classList.add("selected");
       });
     });
-  }); // end fetch
+  });

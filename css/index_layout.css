@@ -1,70 +1,79 @@
-/* Desktop media query - responsiv til pc */
+.hero-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* video-wrapper ligger absolut BAG alt indhold */
+.hero {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+video.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* topRow og section ligger OVER videoen */
+.topRow,
+.hero-section > section {
+  position: relative;
+  z-index: 2;
+}
+
+/* section fylder resten og bruges som anker for categoryNav */
+.hero-section > section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ---- Desktop (min-width: 1024px) ---- */
 @media (min-width: 1024px) {
-  video.video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    z-index: -3;
-  }
-
   .hero-section {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.25);
-    z-index: -2;
-  }
-  .hero-section {
-    width: 100%;
-    height: 100vh; /* giv headeren en højde */
-    position: relative; /* så children kan positioneres absolut */
-    display: flex;
-    flex-direction: column;
-  }
-
-  .categoryNav {
-    position: absolute;
-    bottom: -2rem; /* sæt den i bunden */
-    left: 0;
-    right: 0;
-    display: flex;
-    gap: 25px;
-    justify-content: center;
+    height: 100vh;
   }
 
   .biglogo {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 3rem;
-    height: 200%;
+    flex: 1;
+    padding-top: 2rem;
+  }
+
+  .categoryNav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding-bottom: 2rem;
   }
 }
 
-/* Her er den respnsiv til mobiler */
+/* ---- Mobil (max-width: 768px) ---- */
 @media (max-width: 768px) {
   .hero-section {
-    height: 100svh; /* svh er mere præcis på mobil pga. browserens adresselinje */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .biglogo svg {
-    width: 90%; /* skalér logoet ned */
-    height: auto;
+    height: 100svh;
   }
 
   .biglogo {
@@ -72,94 +81,50 @@
     justify-content: center;
     align-items: center;
     padding-top: 4rem;
+    flex: 1;
+  }
+
+  .biglogo svg {
+    width: 85%;
+    height: auto;
+    max-width: 400px;
   }
 
   .categoryNav {
+    position: absolute;
     bottom: 1rem;
-    gap: 10px;
-    padding: 1rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 0.5rem 1rem;
   }
 
   .categoryNav a {
     font-size: 0.75rem;
     padding: 0.5em 1em;
+    cursor: pointer;
   }
 
   .topNav a span {
-    display: none; /* skjul tekst ved siden af ikoner, vis kun ikoner */
+    display: none;
   }
 
   .topNav {
     gap: 10px;
   }
-  /* HERO SECTION - header */
-  .hero-section {
-    position: relative;
-    width: 100%;
-    height: 100svh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-
-  /* HERO - video container inde i main */
-  .hero {
-    position: relative;
-    width: 100%;
-    height: 100svh;
-    overflow: hidden;
-  }
-
-  video.video-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    z-index: -1;
-  }
-
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.25);
-    z-index: 0;
-  }
 }
+
+/* Grid Layout */
 
 .grid_1-1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0; /* fjern side-margin */
-  padding: 3.5rem 0; /* behold vertikal afstand */
+  padding: 3.5rem 0;
   width: 100%;
 }
-
-@media (max-width: 768px) {
-  .grid_1-1 {
-    grid-template-columns: 1fr;
-    margin: 1rem;
-  }
-
-  .grid_1-1 img {
-    width: 100%;
-    height: auto;
-    order: 2; /* billede under tekst */
-  }
-
-  .grid_1-1 .invert-first {
-    order: 1; /* tekst over billede */
-  }
-}
-
-button {
-  align-items: center;
-}
-
-/* Rettelse af knapper på hero-section */
 
 .grid_1-1-1 {
   display: grid;
@@ -167,10 +132,125 @@ button {
   color: #fff;
 }
 
+.perf-cardimg {
+  width: 90%;
+  margin: 1rem;
+  border-radius: 20px;
+}
 @media (max-width: 768px) {
-  .grid_1-1-1 {
-    display: grid;
+  .grid_1-1 {
     grid-template-columns: 1fr;
-    color: #fff;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+  }
+
+  .grid_1-1 img {
+    width: 100%;
+    height: auto;
+    order: 2;
+  }
+
+  .grid_1-1 h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    text-align: left;
+    padding: 0;
+  }
+
+  .grid_1-1 .invert-first {
+    order: 1;
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .brown .invert-first {
+    margin-left: 0;
+  }
+
+  .grid_1-1-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .perf-cardimg {
+    width: 100%;
+    margin-left: 0;
+    border-radius: 0;
+  }
+  /* section.brown .invert-first {
+    display: inline-block;
+    align-self: center;
+    margin: 0;
+    padding: 0.7rem 2rem;
+    border-radius: 30px;
+    background: #c8bfbb;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+  } */
+  /* .about-btn {
+    align-self: center;
+    margin: 0;
+    padding: 0.7rem 2rem;
+    border-radius: 30px;
+    background: #57504d;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+  } */
+
+  footer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+
+  footer .navn {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer .navn img {
+    max-width: 180px;
+    height: auto;
+  }
+
+  .hours {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 1.5rem 0;
+  }
+
+  .hours h4,
+  .sociale h4 {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #e8e0db;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding: 0.15rem 0;
+    color: #c8bfbb;
+  }
+
+  .sociale img {
+    max-width: 160px;
+    height: auto;
+    margin-top: 0.5rem;
+  }
+
+  .section-text {
+    padding: 2.5rem 1.2rem;
+  }
+
+  p {
+    font-size: 0.97rem;
+    line-height: 1.85;
+    padding: 0.4rem 0;
   }
 }

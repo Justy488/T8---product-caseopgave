@@ -5,8 +5,10 @@
     <link rel="stylesheet" href="css/index_general.css" />
     <link rel="stylesheet" href="css/index_layout.css" />
     <link rel="stylesheet" href="css/index_style.css" />
-    <link rel="stylesheet" href="css/generel.css" />
-    <script src="JS/index.js" defer></script>
+
+    <!-- <script src="js/index.js" defer></script> -->
+    <script src="js/undercategory.js" defer></script>
+    <script src="js/knapper.js" defer></script>
 
     <title>Forside</title>
   </head>
@@ -31,7 +33,8 @@
             </svg>
             Search
           </a>
-          <a href="#">
+
+          <a href="#bund">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -48,7 +51,7 @@
             </svg>
             Account
           </a>
-          <a href="#">
+          <a href="productlist.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -68,7 +71,7 @@
           </a>
         </nav>
       </div>
-      <!-- Ændring af placering af logo og øvre,nedre knapper -->
+
       <section>
         <div class="biglogo">
           <svg
@@ -88,21 +91,28 @@
             />
           </svg>
         </div>
-        <!-- Denne del skal skubbes ned til bunden af vidheroen. underkategoriknapper under vid.  -->
+
         <nav class="categoryNav">
-          <a data-group="Clothes">Clothes</a>
-          <a data-group="Accessories">Accessories</a>
-          <a data-group="Beauty">Beauty</a>
-          <a href="OmOs.html">About Us</a>
+          <ul>
+            <a data-group="Clothes">Clothes</a>
+            <a data-group="Accessories">Accessories</a>
+            <a data-group="Beauty">Beauty</a>
+            <a href="aboutus.html">About Us</a>
+          </ul>
         </nav>
       </section>
-    </header>
-    <main>
       <div class="hero">
         <video class="video-bg" autoplay muted loop playsinline>
-          <source src="vid/reklamevid03-alouramaison02.mp4" type="video/mp4" />
+          <source
+            src="vid/reklamevid03-alouramaison02.mp4"
+            type="video/mp4"
+            alt="En video med en kvinde i mellem 25-35 år, som posere med smykker, tasker, sko"
+          />
         </video>
       </div>
+    </header>
+
+    <main>
       <div>
         <section id="mainCategories"></section>
 
@@ -112,133 +122,76 @@
         <h2>Welcome to Aloura Maison</h2>
         <h3>Womens Fashion</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          enim id officia nostrum repellat illum, veniam unde sequi error,
-          aperiam sapiente dignissimos facere eligendi vero fugiat voluptate
-          beatae nisi quo.
+          Aloura Maison is your online destination for quality clothing and
+          accessories, designed to elevate your everyday and workwear style. We
+          offer trendy, professional pieces at reasonable prices, so you can
+          dress stylishly and confidently without breaking the bank.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          enim id officia nostrum repellat illum, veniam unde sequi error,
-          aperiam sapiente dignissimos facere eligendi vero fugiat voluptate
-          beatae nisi quo.
+          Forget overpriced designer boutiques and high-street markups. With us,
+          you'll find timeless designs that make it easy to create a polished,
+          sophisticated look for any occasion. Upgrade your wardrobe with Aloura
+          Maison and experience fashion that's both accessible and inspiring.
         </p>
       </section>
 
       <section class="grid_1-1 brown">
         <div class="invert-first">
-          <h2 class="invert-first">Womens Fashion</h2>
+          <h3>About Aloura Maison</h3>
           <div class="info-card">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque enim id officia nostrum repellat illum, veniam unde
-              sequi error, aperiam sapiente dignissimos facere eligendi vero
-              fugiat voluptate beatae nisi quo.
+              Aloura Maison is a curated online platform offering stylish,
+              modern fashion, accessories, and lifestyle products in one
+              inspiring space. Our mission is to blend design, quality, and
+              aesthetics, creating a seamless shopping experience that
+              prioritizes both inspiration and ease. Every item is thoughtfully
+              selected to combine style with functionality, making it simple for
+              you to discover new favorites and refine your personal look.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque enim id officia nostrum repellat illum, veniam unde
-              sequi error, aperiam sapiente dignissimos facere eligendi vero
-              fugiat voluptate beatae nisi quo.
+              We believe shopping should be effortless, inspiring, and
+              accessible. Our clean, user-friendly design puts the focus on the
+              products, ensuring smooth navigation and a clear, enjoyable
+              journey through our collections.
             </p>
-            <button>About Us</button>
           </div>
+          <a class="about-btn" href="aboutus.html">About Us</a>
         </div>
-        <img src="billeder/glas03.png" alt="" />
+        <img class="perf-cardimg" src="billeder/cardur04.webp" alt="" />
       </section>
       <section class="grid_1-1">
-        <img src="billeder/glas04.png" alt="" />
+        <img class="perf-cardimg" src="billeder/secondcardinfo.webp" alt="" />
         <div class="invert-first">
           <h2 class="invert-first">Womens Fashion in different Variaties</h2>
           <div class="info-card">
             <p>
-              Find Vores store udvalg af alle former for Kvinde accessories tøj
-              og meget meget mere Aloura Maison find din nærmeste shop derudad
+              Discover Aloura Maison's extensive collection of women's
+              accessories, fashion, and beauty essentials—all in one place.
+              Explore our carefully curated selection and find everything you
+              need to elevate your style.
             </p>
-
-            <button>About Us</button>
+            <p>
+              Visit your nearest Aloura Maison shop or browse online to
+              experience even more of what we have to offer.
+            </p>
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer-bg">
-      <section class="grid_1-1-1">
-        <svg
-          class="foot-logo"
-          width="250"
-          height="278"
-          viewBox="0 0 250 278"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M-0.000210941 45.824L27.9678 1.02397H51.4558L79.3598 45.824H58.0478L54.2078 38.848H25.3438L21.3118 45.824H-0.000210941ZM33.8558 24L31.6798 27.84H48.1278L46.0158 24L40.7038 13.12H39.4238L33.8558 24ZM82.6583 45.824V1.02397H102.498V30.976H162.018V45.824H82.6583ZM202.728 46.848C194.621 46.848 187.581 45.9306 181.608 44.096C175.677 42.2186 171.09 39.552 167.848 36.096C164.648 32.64 163.048 28.544 163.048 23.808V23.04C163.048 18.2613 164.648 14.1653 167.848 10.752C171.09 7.29597 175.677 4.65064 181.608 2.81597C187.581 0.938639 194.621 -2.67029e-05 202.728 -2.67029e-05C210.877 -2.67029e-05 217.917 0.938639 223.848 2.81597C229.778 4.65064 234.344 7.29597 237.544 10.752C240.786 14.1653 242.408 18.2613 242.408 23.04V23.808C242.408 28.544 240.786 32.64 237.544 36.096C234.344 39.552 229.778 42.2186 223.848 44.096C217.917 45.9306 210.877 46.848 202.728 46.848ZM202.728 32.128C208.573 32.128 213.181 31.4026 216.552 29.952C219.965 28.4586 221.672 26.4106 221.672 23.808V23.04C221.672 20.4373 219.965 18.4106 216.552 16.96C213.181 15.4666 208.573 14.72 202.728 14.72C196.925 14.72 192.317 15.4666 188.904 16.96C185.49 18.4106 183.784 20.4373 183.784 23.04V23.808C183.784 26.4106 185.49 28.4586 188.904 29.952C192.317 31.4026 196.925 32.128 202.728 32.128ZM42.9438 123.848C16.4905 123.848 3.26379 115.336 3.26379 98.312V78.024H23.1038V97.672C23.1038 105.309 29.7171 109.128 42.9438 109.128C56.1705 109.128 62.7838 105.309 62.7838 97.672V78.024H82.6238V98.312C82.6238 115.336 69.3971 123.848 42.9438 123.848ZM89.2208 122.824V78.024H153.029C157.594 78.024 161.093 79.048 163.525 81.096C165.957 83.1013 167.173 85.8746 167.173 89.416C167.173 92.1466 166.341 94.3653 164.677 96.072C163.013 97.7786 160.41 98.952 156.869 99.592V100.872C160.751 101.213 163.674 102.323 165.637 104.2C167.599 106.035 168.581 108.424 168.581 111.368V122.824H147.845V112.008C147.845 111.24 147.61 110.621 147.141 110.152C146.671 109.683 146.031 109.448 145.221 109.448H109.061V122.824H89.2208ZM109.061 97.288H143.941C144.751 97.288 145.391 97.032 145.861 96.52C146.33 96.008 146.565 95.3253 146.565 94.472C146.565 93.5333 146.309 92.8293 145.797 92.36C145.285 91.8906 144.666 91.656 143.941 91.656H109.061V97.288ZM170.25 122.824L198.218 78.024H221.706L249.61 122.824H228.298L224.458 115.848H195.594L191.562 122.824H170.25ZM204.106 101L201.93 104.84H218.378L216.266 101L210.954 90.12H209.674L204.106 101ZM4.09579 199.824V155.024H33.7278L43.7758 174.416L53.8238 155.024H83.4558V199.824H64.2558V172.304L64.1918 172.496L49.9838 199.824H37.5678L23.3598 172.496L23.2958 172.304V199.824H4.09579ZM86.8123 199.824L114.78 155.024H138.268L166.172 199.824H144.86L141.02 192.848H112.156L108.124 199.824H86.8123ZM120.668 178L118.492 181.84H134.94L132.828 178L127.516 167.12H126.236L120.668 178ZM168.136 199.824V184.976H197.896V169.872H168.136V155.024H247.496V169.872H217.736V184.976H247.496V199.824H168.136ZM45.0558 277.848C39.8505 277.848 34.6025 277.507 29.3118 276.824C24.0211 276.184 18.9651 275.331 14.1438 274.264C9.32246 273.155 5.03446 271.96 1.27979 270.68L7.23179 260.248C14.3998 262.936 21.2265 264.685 27.7118 265.496C34.2398 266.264 40.4905 266.648 46.4638 266.648C50.9011 266.648 54.2505 266.477 56.5118 266.136C58.7731 265.752 59.9038 265.155 59.9038 264.344C59.9038 263.619 59.0718 263.107 57.4078 262.808C55.7865 262.509 53.5891 262.339 50.8158 262.296C48.0425 262.211 44.9491 262.125 41.5358 262.04C38.1651 261.955 34.6665 261.805 31.0398 261.592C27.4558 261.379 23.9785 260.995 20.6078 260.44C17.2371 259.843 14.2078 258.989 11.5198 257.88C8.83179 256.771 6.67712 255.299 5.05579 253.464C3.47712 251.629 2.68779 249.325 2.68779 246.552C2.68779 243.651 3.58379 241.197 5.37579 239.192C7.21046 237.187 9.70646 235.587 12.8638 234.392C16.0211 233.197 19.6265 232.344 23.6798 231.832C27.7758 231.277 32.0638 231 36.5438 231C40.5545 231 44.5865 231.192 48.6398 231.576C52.7358 231.917 56.7038 232.408 60.5438 233.048C64.3838 233.645 67.9465 234.349 71.2318 235.16C74.5171 235.971 77.3331 236.824 79.6798 237.72L73.7278 248.152C70.1011 246.872 66.0905 245.805 61.6958 244.952C57.3438 244.056 52.8211 243.395 48.1278 242.968C43.4345 242.499 38.7838 242.264 34.1758 242.264C27.0505 242.264 23.4878 243.011 23.4878 244.504C23.4878 245.187 24.3198 245.677 25.9838 245.976C27.6478 246.275 29.8665 246.467 32.6398 246.552C35.4558 246.595 38.5491 246.659 41.9198 246.744C45.2478 246.829 48.7038 246.979 52.2878 247.192C55.9145 247.405 59.3918 247.789 62.7198 248.344C66.0905 248.899 69.1198 249.731 71.8078 250.84C74.5385 251.907 76.6931 253.336 78.2718 255.128C79.8505 256.92 80.6398 259.16 80.6398 261.848C80.6398 264.792 79.6585 267.288 77.6958 269.336C75.7758 271.384 73.1518 273.048 69.8238 274.328C66.4958 275.565 62.6985 276.461 58.4318 277.016C54.1651 277.571 49.7065 277.848 45.0558 277.848ZM123.353 277.848C115.246 277.848 108.206 276.931 102.233 275.096C96.3021 273.219 91.7155 270.552 88.4728 267.096C85.2728 263.64 83.6728 259.544 83.6728 254.808V254.04C83.6728 249.261 85.2728 245.165 88.4728 241.752C91.7155 238.296 96.3021 235.651 102.233 233.816C108.206 231.939 115.246 231 123.353 231C131.502 231 138.542 231.939 144.473 233.816C150.403 235.651 154.969 238.296 158.169 241.752C161.411 245.165 163.033 249.261 163.033 254.04V254.808C163.033 259.544 161.411 263.64 158.169 267.096C154.969 270.552 150.403 273.219 144.473 275.096C138.542 276.931 131.502 277.848 123.353 277.848ZM123.353 263.128C129.198 263.128 133.806 262.403 137.177 260.952C140.59 259.459 142.297 257.411 142.297 254.808V254.04C142.297 251.437 140.59 249.411 137.177 247.96C133.806 246.467 129.198 245.72 123.353 245.72C117.55 245.72 112.942 246.467 109.529 247.96C106.115 249.411 104.409 251.437 104.409 254.04V254.808C104.409 257.411 106.115 259.459 109.529 260.952C112.942 262.403 117.55 263.128 123.353 263.128ZM168.158 276.824V232.024H187.742L227.678 256.728V232.024H247.518V276.824H227.934L187.998 252.12V276.824H168.158Z"
-            fill="white"
-          />
-        </svg>
-        <div>
-          <h4>Åbningstider</h4>
-          <p>Mon - Tue : 10:00 - 21:30</p>
-          <p>Wed - Thu : 10:00 - 22:00</p>
-          <p>Fri - Son : 10:00 - 23:00</p>
-        </div>
-        <div>
-          <p>Find Us On</p>
-          <svg
-            width="300"
-            height="80"
-            viewBox="0 0 300 80"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M133.198 5.56672C128.981 5.74883 126.089 6.37923 123.574 7.28981C120.968 8.24243 118.769 9.50323 116.57 11.5485C114.371 13.6078 113.016 15.6672 112.007 18.0907C111.043 20.4442 110.38 23.1199 110.184 27.0424C110.004 30.9649 109.958 32.2257 109.973 42.2421C110.004 52.2445 110.049 53.5053 110.244 57.4418C110.455 61.3643 111.118 64.026 112.112 66.3795C113.121 68.8031 114.477 70.8484 116.691 72.8937C118.905 74.939 121.104 76.1998 123.724 77.1384C126.24 78.049 129.131 78.6654 133.349 78.8335C137.566 79.0016 138.921 79.0436 149.675 79.0156C160.444 79.0016 161.784 78.9596 166.017 78.7774C170.234 78.5813 173.111 77.9509 175.626 77.0403C178.231 76.0877 180.445 74.8269 182.644 72.7816C184.843 70.7223 186.184 68.677 187.193 66.2394C188.172 63.8999 188.835 61.2102 189.015 57.3017C189.196 53.3652 189.241 52.1044 189.226 42.102C189.211 32.0856 189.151 30.8388 188.955 26.9023C188.759 22.9798 188.081 20.3041 187.102 17.9646C186.078 15.5271 184.723 13.4818 182.524 11.4365C180.31 9.39116 178.096 8.13035 175.49 7.20576C172.975 6.29518 170.083 5.67879 165.866 5.51068C161.634 5.32857 160.293 5.28654 149.524 5.31456C138.771 5.32857 137.415 5.37059 133.198 5.56672ZM133.65 72.1932C129.794 72.0391 127.701 71.4368 126.3 70.9324C124.447 70.274 123.122 69.4755 121.736 68.1867C120.336 66.8979 119.477 65.6791 118.754 63.956C118.212 62.6672 117.564 60.7059 117.384 57.1196C117.188 53.2391 117.143 52.0624 117.112 42.2281C117.097 32.3798 117.143 31.2171 117.323 27.3366C117.489 23.7363 118.137 21.7891 118.664 20.4862C119.387 18.7631 120.245 17.5444 121.616 16.2415C123.001 14.9527 124.327 14.1542 126.179 13.4818C127.565 12.9634 129.674 12.3611 133.529 12.1929C137.701 12.0108 138.951 11.9688 149.54 11.9548C160.113 11.9268 161.378 11.9688 165.55 12.1369C169.42 12.291 171.514 12.8934 172.915 13.3977C174.767 14.0561 176.093 14.8546 177.478 16.1435C178.864 17.4323 179.722 18.6511 180.445 20.3742C180.988 21.677 181.65 23.6242 181.831 27.2105C182.027 31.105 182.072 32.2678 182.087 42.102C182.102 51.9503 182.072 53.1131 181.891 56.9935C181.726 60.5938 181.078 62.5411 180.536 63.8439C179.828 65.567 178.969 66.7998 177.584 68.0886C176.198 69.3774 174.873 70.1759 173.02 70.8484C171.634 71.3527 169.541 71.9691 165.67 72.1372C161.498 72.3193 160.248 72.3613 149.66 72.3754C139.087 72.3894 137.837 72.3613 133.65 72.1932ZM165.956 22.4615C165.971 24.9131 168.095 26.8883 170.716 26.8743C173.351 26.8743 175.475 24.885 175.475 22.4475C175.46 20.0099 173.336 18.0347 170.701 18.0347C168.08 18.0347 165.956 20.0239 165.956 22.4615ZM129.252 42.2001C129.282 52.6508 138.409 61.1122 149.645 61.0841C160.881 61.0701 169.978 52.5807 169.948 42.1301C169.933 31.6794 160.805 23.218 149.555 23.246C138.334 23.26 129.237 31.7494 129.252 42.2001ZM136.391 42.1861C136.376 35.4058 142.28 29.8862 149.57 29.8862C156.874 29.8722 162.793 35.3497 162.809 42.1441C162.824 48.9244 156.92 54.4439 149.63 54.4579C142.34 54.4719 136.406 48.9664 136.391 42.1861Z"
-              fill="white"
-            />
-            <mask
-              id="mask0_220_40"
-              style="mask-type: luminance"
-              maskUnits="userSpaceOnUse"
-              x="0"
-              y="6"
-              width="82"
-              height="73"
-            >
-              <path d="M0 6.3457H81.4172V78.2188H0V6.3457Z" fill="white" />
-            </mask>
-            <g mask="url(#mask0_220_40)">
-              <path
-                d="M80.927 42.1334C80.927 22.3778 62.8207 6.35938 40.4712 6.35938C18.1216 6.35938 0 22.3778 0 42.1334C0 58.8966 13.0666 72.9788 30.698 76.8513V53.0606H22.3495V42.1334H30.698V37.4213C30.698 25.2484 36.9173 19.602 50.4434 19.602C53.0016 19.602 57.4286 20.0488 59.2362 20.4957V30.3938C58.2864 30.3126 56.6321 30.2584 54.5641 30.2584C47.9312 30.2584 45.373 32.479 45.373 38.2608V42.1199H58.5775L56.3104 53.0606H45.373V77.6367C65.4095 75.4973 80.927 60.4131 80.927 42.1199V42.1334Z"
-                fill="white"
-              />
-            </g>
-            <path
-              d="M250.358 34.4423V32.2552C249.556 32.1659 248.737 32.0916 247.902 32.0916C237.866 32.0916 229.697 39.5156 229.697 48.6506C229.697 54.2447 232.775 59.199 237.473 62.1895C234.445 59.2288 232.644 55.2713 232.644 50.9269C232.644 41.9258 240.519 34.6505 250.358 34.4423Z"
-              fill="white"
-            />
-            <path
-              d="M250.8 58.5293C255.27 58.5293 258.986 55.2413 259.15 51.2094L259.183 15.2347H266.354V15.1752C266.206 14.4462 266.125 13.6726 266.125 12.8989H256.22L256.203 48.9331C256.039 52.965 252.389 56.2084 247.903 56.2084C246.511 56.2084 245.201 55.8811 244.055 55.3306C245.561 57.2349 248.017 58.5293 250.8 58.5293Z"
-              fill="white"
-            />
-            <path
-              d="M279.878 27.5096V25.3969C277.127 25.3969 274.54 24.653 272.396 23.3735C274.311 25.382 276.914 26.9293 279.878 27.5096Z"
-              fill="white"
-            />
-            <path
-              d="M272.395 23.3735C270.283 21.1864 269.006 18.315 269.006 15.1758H266.304C267.008 18.5977 269.284 21.5435 272.395 23.3735Z"
-              fill="white"
-            />
-            <path
-              d="M247.903 41.0176C243.319 41.0176 239.537 44.4693 239.537 48.6351C239.537 51.5362 241.403 54.0655 244.055 55.3301C243.073 54.0952 242.484 52.5628 242.484 50.9263C242.484 46.7605 246.2 43.3683 250.801 43.3683C251.652 43.3683 252.47 43.4873 253.24 43.7105V34.5457C252.438 34.4416 251.619 34.3821 250.801 34.3821C250.653 34.3821 250.506 34.3821 250.358 34.3821H250.326L250.293 41.33C249.524 41.1217 248.77 41.0176 247.903 41.0176Z"
-              fill="white"
-            />
-            <path
-              d="M279.877 27.4048H279.844V34.3379C274.703 34.3379 269.939 32.8054 266.059 30.2762V48.6355C266.059 57.7705 257.955 65.135 247.903 65.135C244.039 65.135 240.437 64.0787 237.474 62.1892C240.797 65.4326 245.545 67.4709 250.8 67.4709C260.836 67.4709 269.006 60.0468 269.006 50.9267V32.6567C272.886 35.1859 277.634 36.6737 282.759 36.6737V27.6875C281.776 27.6875 280.81 27.5833 279.877 27.4048Z"
-              fill="white"
-            />
-          </svg>
-        </div>
-      </section>
+    <footer>
+      <div id="#bund" class="navn">
+        <img src="billeder/Aloura Maison_foot.svg" alt="" />
+      </div>
+      <div class="hours">
+        <h4>Opening hours</h4>
+        <p>Mon - Tue: 10:00 - 21:30</p>
+        <p>Wed - Thu: 10:00 - 22:00</p>
+        <p>Fri - Son: 10:00 - 23:00</p>
+      </div>
+      <div class="sociale">
+        <h4>Find us</h4>
+        <img src="billeder/someicons.svg" alt="" />
+      </div>
     </footer>
   </body>
 </html>

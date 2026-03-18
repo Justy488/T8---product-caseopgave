@@ -5,12 +5,18 @@
   margin-top: 40px;
 }
 
+/* størrelserne */
 .sizes {
   display: flex;
   gap: 10px;
   margin-bottom: 2em;
 }
+.sizes button.selected {
+  background-color: #333;
+  color: white;
+}
 
+/* +og- */
 .quantity {
   display: flex;
   gap: 10px;
@@ -21,11 +27,6 @@
   border-radius: 1em;
 }
 
-.sizes button.selected {
-  background-color: #333;
-  color: white;
-}
-
 .beskrivelse {
   margin: 4em;
   border-top: 1px solid black;
@@ -33,6 +34,7 @@
   text-align: center;
 }
 
+/* beskrivelse overskrift */
 .boverskrift {
   margin-left: 4em;
   margin-bottom: -2em;
@@ -71,6 +73,11 @@ button {
   border-radius: 1em;
 }
 
+.buynow {
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
 .buynow:hover {
   background-color: #333;
   color: white;
@@ -82,4 +89,33 @@ button {
 }
 .hjerte:hover {
   color: pink;
+}
+
+/* knapper til at vise flere billeder */
+
+.image-indicators {
+  margin-left: 10em;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot:first-child {
+  background-color: pink;
+}
+.billede {
+  display: block;
+  margin: 0 auto;
+}
+.småp {
+  font-size: smaller;
+  color: #706f6f;
+}
+
+.småp span {
+  font-size: 20px;
 }

@@ -3,40 +3,25 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 /* også med fokus på effekterne */
 body {
   margin: 0;
 }
-@media (min-width: 860px) {
+@media (min-width: 769px) {
   /* Forside */
   .mainNav {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+
     gap: 10px;
     padding: 20px;
   }
-
   .mainNav > * {
     margin: 0;
     text-decoration: none;
   }
-
-  /* hover effekt på iconerne */
-
-  /* .topRow a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.6em 1.8em; */
-  /* border: 1px solid rgba(255, 255, 255, 0.6);  for et enkelt look*/
-  /* letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease,
-      border-color 0.3s ease;
-  } */
 
   .topRow a:hover {
     background-color: rgba(255, 255, 255, 0.95);
@@ -44,24 +29,20 @@ body {
     border-color: transparent;
     border-radius: 15px;
   }
-
   .topRow {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   .topNav {
     display: flex;
     gap: 20px;
     justify-content: flex-end;
   }
-
   /* placering af iconer i toppen */
   .topNav {
     margin-left: auto; /* skubber hele nav til højre */
   }
-
   .topNav a {
     display: flex;
     align-items: center;
@@ -73,41 +54,30 @@ body {
     text-decoration: none;
     padding: 0.6em 1.8em;
   }
-
   .topNav a:hover {
     opacity: 0.7;
     transition: opacity 0.3s ease;
   }
-
-  .categoryNav {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    padding-top: 10px;
-  }
-
   nav a {
     margin: 1em;
     color: #ddd;
     text-decoration: none;
     cursor: pointer;
   }
-
   nav {
     background-color: transparent;
   }
-
   nav a::after {
     background-color: #ddd;
     color: black;
   }
-
-  .categoryButtons a {
-    color: black;
+  .categoryNav a {
+    color: #fff;
     padding: 1em;
     margin: 1em;
     padding-left: 2em;
     padding-right: 2em;
+    gap: 25px;
     cursor: pointer;
   }
 
@@ -131,6 +101,11 @@ body {
   /* tilføjelse af effekt til knapper */
 
   .categoryNav {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    text-decoration: none;
+    align-items: center;
     transition:
       transform 0.8s ease,
       background-color 0.4s ease,
@@ -141,9 +116,10 @@ body {
   .categoryNav:hover {
     transform: translateY(-10px);
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 2.5rem 3rem;
+    padding: 2.5rem 1rem;
     padding-bottom: 2rem;
-    margin: 1rem 0;
+    margin: 1rem -1rem;
+    border-radius: 50px;
   }
 
   .categoryNav:hover a {
