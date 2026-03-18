@@ -160,7 +160,8 @@ footer {
   justify-items: center;
   background-color: #5c534e;
   color: #ddd;
-  padding-top: 2em;
+  padding: 2em;
+  margin: 0;
 }
 
 footer p {
