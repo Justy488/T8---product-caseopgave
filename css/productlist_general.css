@@ -209,3 +209,163 @@ article p {
   margin: 1em;
   font-size: 1em;
 }
+
+/* Header og footer mobile */
+@media (max-width: 769px) {
+  .mainNav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .mainNav > * {
+    margin: 0;
+    text-decoration: none;
+  }
+
+  .topRow a:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #1a1a1a;
+    border-color: transparent;
+    border-radius: 15px;
+  }
+
+  .topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .topNav {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  .topNav a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #000000;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.6em 1.8em;
+  }
+
+  .categoryNav {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding-top: 5px;
+  }
+
+  .categoryNav a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+  }
+
+  nav a {
+    margin: 0.5em;
+  }
+
+  .categoryButtons a {
+    color: black;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    cursor: pointer;
+  }
+
+  .subcategoryList {
+    display: flex;
+    justify-content: center;
+  }
+
+  .subcategory {
+    text-decoration: none;
+    padding: 1em;
+    color: white;
+    background-color: gray;
+    border-radius: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0.5em;
+    font-size: 0.5em;
+  }
+
+  .logo img {
+    max-width: 100%;
+  }
+
+  .navn img {
+    max-width: 80%;
+  }
+
+  .sociale img {
+    max-width: 90%;
+  }
+}
+
+/* Productlist mobile */
+@media (max-width: 769px) {
+  .produktliste main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 4em;
+  }
+
+  .collage {
+    grid-column: 1/-1;
+    justify-items: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .produktliste main h2 {
+    grid-column: 1/-1;
+    font-family: "Kugile";
+    font-size: 2rem;
+  }
+
+  .produktliste h3 {
+    font-family: "Brilliant";
+    font-size: 1rem;
+  }
+
+  article {
+    margin-bottom: 2rem;
+  }
+
+  article p {
+    font-family: "Poppins";
+    font-size: 1rem;
+  }
+
+  .like {
+    width: 5%;
+  }
+
+  .buy {
+    display: flex;
+    justify-items: center;
+  }
+
+  .buy a {
+    text-decoration: none;
+    color: white;
+    background-color: #5c534e;
+    border-radius: 0.5em;
+    padding-left: 7em;
+    padding-right: 7em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    margin: 1em;
+    font-size: 1em;
+  }
+}
