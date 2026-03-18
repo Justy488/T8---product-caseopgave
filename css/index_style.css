@@ -22,7 +22,8 @@
 
 @font-face {
   font-family: "Orange Avenue";
-  src: url("/fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf") format("truetype");
+  src: url("/fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -48,6 +49,7 @@ h2 {
   margin: 0;
   font-size: clamp(2rem, 5vw, 4rem);
   padding-bottom: 0;
+  letter-spacing: 0.04em;
 }
 
 h3 {
@@ -55,75 +57,83 @@ h3 {
   text-align: center;
   color: rgba(10, 9, 9, 0.9);
   margin: auto;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+  margin-bottom: 1.5rem;
+  opacity: 0.75;
 }
 
-h4 {
-  font-size: clamp(1rem, 3vw, 2rem);
-}
 p {
   align-content: center;
   font-family: Orange Avenue DEMO;
-  text-align: left;
-
-  max-width: 70ch;
-  padding: 20px;
+  max-width: 65ch;
+  padding: 0.6rem 0;
   margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.9;
+  color: #2a2a2a;
   text-align: left;
 }
 
 .section-text {
+  padding: 3rem 1.5rem;
+  text-align: center;
   align-content: center;
 }
-.white {
-  background-color: #fff;
+
+section.brown .invert-first .info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+section.brown .invert-first .info-card p {
+  color: #e8e0db;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  line-height: 1.8;
   padding: 0;
   margin: 0;
-}
-.box-it {
-  padding: 1em;
-}
-
-.brown .invert-first {
-  background-color: #5c534e;
-  color: #fff;
-  margin-left: 1rem;
+  max-width: 100%;
 }
 .about-btn {
-  position: absolute;
-  margin-top: 2rem;
+  align-self: center;
+  margin: 0;
   padding: 0.7rem 2rem;
   border-radius: 30px;
-  border: none;
-  background: #8a817c;
+  background: #978e8a;
   color: white;
   cursor: pointer;
-  align-content: center;
   text-decoration: none;
+  font-size: 0.9rem;
 }
-
 .about-btn:hover {
-  background-color: rgba(255, 255, 255, 0.95);
-  color: #1a1a1a;
-  border-color: transparent;
-  border-radius: 20px;
+  align-self: center;
+  margin: 0;
+  padding: 0.7rem 2rem;
+  border-radius: 30px;
+  background: #ccc4c0;
+  color: rgb(2, 1, 1);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
-
-.info-card {
-  margin: 1rem;
-}
-
-/* .footer-bg {
+section.brown .invert-first {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background-color: #5c534e;
-  padding: 3rem 1rem;
-  color: #fff;
+  padding: 3rem 2rem;
+  margin-left: 1rem;
+  gap: 1.5rem;
 }
-
-.foot-logo {
-  margin: 2em;
-} */
+section.brown .invert-first h3 {
+  font-family: brillant;
+  color: #f0ebe8;
+  text-align: left;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+}
 
 footer {
   display: grid;
@@ -131,38 +141,35 @@ footer {
   justify-items: center;
   background-color: #5c534e;
   color: #ddd;
-  padding: 2em;
+  padding: 3rem 4rem;
   margin: 0;
+  align-items: start;
+  gap: 1rem;
 }
 
 footer p {
-  padding: 0.5em;
-  justify-items: center;
-}
-
-.navn {
-  font-family: "BBH Bartle";
-  font-style: normal;
-  font-size: 2rem;
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #c8bfbb;
 }
 
 .hours h4 {
   font-family: "Kugile";
   font-style: normal;
-  font-size: 1em;
-}
-
-.hours p {
-  font-family: "Poppins";
-  font-style: normal;
-}
-
-.sociale {
-  text-align: center;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #e8e0db;
 }
 
 .sociale h4 {
   font-family: "Kugile";
   font-style: normal;
-  font-size: 1em;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #e8e0db;
 }
