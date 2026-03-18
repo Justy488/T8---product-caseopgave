@@ -16,7 +16,7 @@ const subcategories = {
     { name: "Shoes", category: "womens-shoes" },
     { name: "Watches", category: "womens-watches" },
     { name: "Bags", category: "womens-bags" },
-    { name: "Sunglasses", category: "Sunglasses" },
+    { name: "Sunglasses", category: "sunglasses" },
   ],
 
   Beauty: [
