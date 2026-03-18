@@ -1,18 +1,3 @@
-/* =============================================
-   LAYOUT CSS — baseret på faktisk HTML-struktur:
-   
-   <header.hero-section>
-     <div.topRow>
-     <section>
-       <div.biglogo>
-       <nav.categoryNav>
-     </section>
-     <div.hero>          ← video-container
-   </header>
-   ============================================= */
-
-/* ---- Basis (gælder altid) ---- */
-
 .hero-section {
   position: relative;
   width: 100%;
@@ -120,6 +105,7 @@ video.video-bg {
   .categoryNav a {
     font-size: 0.75rem;
     padding: 0.5em 1em;
+    cursor: pointer;
   }
 
   .topNav a span {
@@ -131,9 +117,7 @@ video.video-bg {
   }
 }
 
-/* =============================================
-   GRID-LAYOUTS
-   ============================================= */
+/* Grid Layout */
 
 .grid_1-1 {
   display: grid;
@@ -150,15 +134,15 @@ video.video-bg {
 
 .perf-cardimg {
   width: 90%;
-  margin-left: 2.5rem;
+  margin: 1rem;
   border-radius: 20px;
 }
-
 @media (max-width: 768px) {
   .grid_1-1 {
     grid-template-columns: 1fr;
-    margin: 1rem;
-    margin: 1rem;
+    margin: 0;
+    padding: 0;
+    gap: 0;
   }
 
   .grid_1-1 img {
@@ -167,8 +151,19 @@ video.video-bg {
     order: 2;
   }
 
+  .grid_1-1 h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    text-align: left;
+    padding: 0;
+  }
+
   .grid_1-1 .invert-first {
     order: 1;
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .brown .invert-first {
+    margin-left: 0;
   }
 
   .grid_1-1-1 {
@@ -176,18 +171,86 @@ video.video-bg {
   }
 
   .perf-cardimg {
-    width: 90%;
-    margin-left: 1.5rem;
-    border-radius: 20px;
+    width: 100%;
+    margin-left: 0;
+    border-radius: 0;
   }
-
-  .about-btn {
+  /* section.brown .invert-first {
+    display: inline-block;
+    align-self: center;
+    margin: 0;
     padding: 0.7rem 2rem;
     border-radius: 30px;
-    border: none;
-    background: #8a817c;
+    background: #c8bfbb;
     color: white;
     cursor: pointer;
-    margin: 1rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+  } */
+  /* .about-btn {
+    align-self: center;
+    margin: 0;
+    padding: 0.7rem 2rem;
+    border-radius: 30px;
+    background: #57504d;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+  } */
+
+  footer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+
+  footer .navn {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer .navn img {
+    max-width: 180px;
+    height: auto;
+  }
+
+  .hours {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 1.5rem 0;
+  }
+
+  .hours h4,
+  .sociale h4 {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #e8e0db;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding: 0.15rem 0;
+    color: #c8bfbb;
+  }
+
+  .sociale img {
+    max-width: 160px;
+    height: auto;
+    margin-top: 0.5rem;
+  }
+
+  .section-text {
+    padding: 2.5rem 1.2rem;
+  }
+
+  p {
+    font-size: 0.97rem;
+    line-height: 1.85;
+    padding: 0.4rem 0;
   }
 }
